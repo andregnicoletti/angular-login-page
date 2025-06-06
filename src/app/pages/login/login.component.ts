@@ -11,7 +11,11 @@ import { PrimaryInputComponent } from '../../components/primary-input/primary-in
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [DefaultLoginLayoutComponent, ReactiveFormsModule, PrimaryInputComponent],
+  imports: [
+    DefaultLoginLayoutComponent,
+    ReactiveFormsModule,
+    PrimaryInputComponent,
+  ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
 })
@@ -26,5 +30,9 @@ export class LoginComponent {
         Validators.minLength(6),
       ]),
     });
+  }
+
+  submit() {
+    console.log(this.loginForm.value);
   }
 }
