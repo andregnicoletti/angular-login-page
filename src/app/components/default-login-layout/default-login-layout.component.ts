@@ -17,6 +17,9 @@ export class DefaultLoginLayoutComponent {
   @Input('secondaryBtnText')
   secondaryBtnText: string = '';
 
+  @Input()
+  disablePrimaryBtn: boolean = true;
+
   @Output('submit')
   onSubmit = new EventEmitter();
 
